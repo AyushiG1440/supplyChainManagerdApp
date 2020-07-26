@@ -17,3 +17,4 @@ Software requirements:
   To run the application, run the command "npm run dev".
   
   In the metamask plugin, create a network for http://localhost:9545 and connect to this network. Make sure to connect the accounts to localhost:3000 to interface metamask with dApp.
+download node-modules setup files too 
