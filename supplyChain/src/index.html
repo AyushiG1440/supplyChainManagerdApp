@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>supplyChain dApp</title>
+	<link rel="stylesheet" href="css/style1.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/web3.min.js"></script>
+    	<script src="js/truffle-contract.js"></script>
+    	<script src="js/app.js"></script>
+</head>
+<body>
+
+<header>
+	<h1><u>HIMALAYA LABS DAPP</u></h1>
+</header>
+<hr>
+<div class="container-start">
+    <div class="select-address"><label for='address'>Select your address (make sure it matches metamask account address):</label><select id="address"></select></div><br>
+<button class="button-start">Click to register</button>
+</div>
+<hr>
+<button class="button-seller" onclick="toggleButton(0)">Click to be a seller</button>
+<div class="container-toggle">
+	<br>
+	<div class="container-addItem">
+	<h3>Share some product details to sell it on this platform:</h3>
+	<label for="itemDescription">Product description:</label><input type="text" id="itemDescription"><br>
+	<label for="price">Price per item (in ether):</label><input type="text" id="price"><br>
+	<label for="inventory">Number of pieces available:</label><input type="text" id="inventory"><br>
+	<Button class="button-addItem">Add product</button>
+	</div>
+	<br>
+	<div class="container-viewOrders">
+	<button class="button-viewOrders">View received orders</button>
+		<div id="container-orderTable"></div>
+	</div>
+</div>
+<hr>
+<button class="button-buyer" onclick="toggleButton(1)">Click to shop now!</button>
+<div class="container-toggle">
+	<br>
+	<div class="container-viewItems">
+	<button class="button-viewItems">Click to browse products</button>
+		<div id="container-itemTable"></div>
+	</div>
+	<div class="container-placeOrder">
+	<h3>Place your order below.Please pay 0.5 ether extra for deposit (refunded later).</h3>
+	<label for="itemID">Product ID:</label><input type="text" id="itemID"><br>
+	<label for="quantity">Number of pieces to be ordered</label><input type="text" id="quantity"><br>
+	<label for="amount">Amount to be payed (in ether):</label><input type="text" id="amount"><br>
+	<button class="button-placeOrder">Click to place order</button>
+	</div>
+	<div class="container-confirmReceive">
+	<h3>Confirm ordered received to get refund of 0.5 ether deposit-</h3>
+	<label for="confirmItemId">Item ID of product received:</label><input type="text" id="confirmItemId"><br>
+	<label for="confirmOrderId">Order ID:</label><input type="text" id="confirmOrderId"><br>
+	<button class="button-confirmReceive">Confirm received order</button>
+	</div>
+</div>
+
+</body>
+</html>
