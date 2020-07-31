@@ -13,6 +13,7 @@ contract supplyChain{
     struct person{
         uint ID;
         order[] sellOrders;
+        order[] placedOrders;
         bool registered;
     }
     struct item{
@@ -52,6 +53,12 @@ contract supplyChain{
         itemCount++;
         temp_id = itemCount-1;
     }
+    function updateItem(uint _itemID,uint _price,uint _inventory) public onlyRegistered{
+        itemList[_itemID].inventory += _inventory;
+        if(_price!=0){
+            itemList[_itemID].price = _price;
+        }
+    }
     
     function getItems() public view returns(uint[],bytes32[],uint[],uint[]){
         uint[] memory a = new uint[](itemList.length);
@@ -71,12 +78,29 @@ contract supplyChain{
     function placeOrder(uint _itemID,uint _quantity) public payable {
         //0.5 extra for safety escrow
         require(msg.value  == (_quantity*itemList[_itemID].price)+500000000000000000);
+        require(_quantity<=itemList[_itemID].inventory);
         address seller = itemList[_itemID].producer;
         personDetails[seller].sellOrders.push(order({orderID:orderCount,buyer:msg.sender,itemId:_itemID,quantity:_quantity,doneStatus:false}));
+        personDetails[msg.sender].placedOrders.push(order({orderID:orderCount,buyer:msg.sender,itemId:_itemID,quantity:_quantity,doneStatus:false}));
         orderCount++;
         itemList[_itemID].inventory -=_quantity;
         temp_id = orderCount-1;
     } 
+    
+    function viewPlacedOrders() public view returns(uint[],uint[],uint[],bool[]){
+        uint[] memory a = new uint[](personDetails[msg.sender].placedOrders.length);
+        uint[] memory b = new uint[](personDetails[msg.sender].placedOrders.length);
+        uint[] memory c = new uint[](personDetails[msg.sender].placedOrders.length);
+        bool[] memory d = new bool[](personDetails[msg.sender].placedOrders.length);
+        for (uint i = 0; i < personDetails[msg.sender].placedOrders.length; i++)
+            {
+                a[i] = personDetails[msg.sender].placedOrders[i].orderID;
+                b[i] = personDetails[msg.sender].placedOrders[i].itemId;
+                c[i] = personDetails[msg.sender].placedOrders[i].quantity;
+                d[i] = personDetails[msg.sender].placedOrders[i].doneStatus;
+            }
+         return (a,b,c,d);
+    }
     
     function viewOrderList() public view onlyRegistered returns(address[],uint[],uint[],bool[]){
         address[] memory a = new address[](personDetails[msg.sender].sellOrders.length);
@@ -100,6 +124,11 @@ contract supplyChain{
                 personDetails[addr].sellOrders[i].doneStatus = true;
                 addr.transfer((personDetails[addr].sellOrders[i].quantity)*(itemList[_itemID].price));
                 msg.sender.transfer(500000000000000000);
+            }
+        }
+        for(uint j=0;j<personDetails[msg.sender].placedOrders.length;j++){
+            if(personDetails[msg.sender].placedOrders[j].buyer==msg.sender && personDetails[msg.sender].placedOrders[j].orderID == _orderID && personDetails[msg.sender].placedOrders[j].doneStatus == false){
+                personDetails[msg.sender].placedOrders[j].doneStatus = true;
             }
         }
     }
