@@ -1,0 +1,97 @@
+body{
+background : rgb(255, 204, 255);
+padding: 10px 50px 10px 50px;
+}
+
+h1{
+text-align : center;
+color : rgb(0, 0, 77);
+}
+
+header{
+padding : 10px;
+}
+
+button{
+background : rgba(102, 255, 51, 1);
+border-width : 2px;
+margin:1px;
+}
+
+button:hover{
+background : rgba(102, 255, 51, 0.5);
+}
+
+input{
+width : 50%;
+padding : 2px;
+margin : 1px;
+overflow : auto;
+}
+
+label{
+margin : 1px;
+}
+
+div{
+margin : 5px;
+}
+
+table{
+border-collapse : collapse;
+width : 100%;
+border : 1px solid black;
+background-color : #ffffff;
+
+}
+
+th, td {
+border : 1px solid black;
+padding : 15px;
+text-align : left;
+}
+
+th{
+background-color : rgba(0, 204, 0, 0.7);
+}
+
+tr:hover {
+background-color : rgb(204, 204, 204);
+}
+
+.container-start{
+width:800px;
+height:190px;
+border :1px solid black;
+margin:auto;
+background :rgb(179, 230, 255);
+}
+
+.button-i-seller{
+float:left;
+margin-left:25%;
+}
+
+.button-i-customer{
+float:right;
+margin-right:25%;
+}
+
+.button-start{
+margin-left:37%;
+margin-top:5%;
+margin-bottom:5%;
+}
+
+.container-addItem,.container-updateItem,.container-viewOrders,.container-viewItems,.container-placeOrder,.container-confirmReceive,.container-history,.product-placeOrder{
+background : rgb(179, 230, 255);
+padding : 5px;
+margin : 5px;
+}
+
+.container-addItem,.container-updateItem{
+width:845px;
+height:200px;
+display:inline-block;
+}
+

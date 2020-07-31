@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>supplyChain dApp</title>
+	<link rel="stylesheet" href="css/style1.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+    	<script src="js/web3.min.js"></script>
+    	<script src="js/truffle-contract.js"></script>
+        <script src="js/item.js"></script>
+</head>
+<body>
+<div class="select-address">
+	<span>You are signed in from address: </span><span class='address'></span>
+	<a href="customer.html"><button style="float:right">Go back</button></a>
+	<a href="seller.html"><button style="float:right">Go to your seller profile</button></a>
+	<a href="history.html"><button style="float:right">View your shopping history</button></a>
+</div><hr><br>
+<div class="product-placeOrder">
+    <h1 class='item-description'></h1><br>
+    <span>Item ID: </span><span class='item-id'></span><br>
+    <span>Price per piece: </span><span class='item-price'></span><br>
+    <p class='item-inventory'></p><br>
+    <label for='orderSize'>No. of pieces to be ordered: </label><input type="text" class="orderSize">
+    <button class="button-placeOrder">Place Order now!</button><br>
+    <div class="container-receipt-order" style="text-align:center;"></div>
+</div>
+</body>
+</html>
