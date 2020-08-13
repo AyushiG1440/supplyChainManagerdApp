@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>supplyChain dApp</title>
+	<link rel="stylesheet" href="css/style1.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/web3.min.js"></script>
+    	<script src="js/truffle-contract.js"></script>
+    	<script src="js/seller.js"></script>
+</head>
+<body style="font-family: sans-serif;">
+<div class="container">
+<div class="container-top">
+<header><h1><u>Welcome to seller zone</u></h1></header>
+<div class="select-address">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Search for item id.." title="Type in a name"> 
+<div class="dropdown" style='display: inline-block;'>
+    <button class="dropbtn">Dropdown  >></button>
+    <div class="dropdown-content">
+        <a href="customer.html">Shop now!</a>
+        <a href="history.html">Shopping history</a>
+        <a href="index.html">Logout</a>
+    </div>
+</div><br>
+</div>
+    </div>
+<div class="container-side">
+<div class="container-addItem">
+	<h3>Share the product details:</h3>
+	<label for="itemDescription" style="font-family: Comic Sans MS,Times new roman;">Product description:</label><br><input type="text" id="itemDescription" style="width: 80%;"><br>
+	<label for="price" style="font-family: Comic Sans MS,Times new roman;">Price per item (in ether):</label><br><input type="text" id="price" style="width: 80%;"><br>
+	<label for="inventory" style="font-family: Comic Sans MS,Times new roman;">Number of pieces available:</label><br><input type="text" id="inventory" style="width: 80%;"><br>
+	<button class="button-addItem">Add product</button><br><br>
+	<div class="container-receipt-addItem" style="color: red;text-align: center;font-size: 120%;"></div><br>
+</div>
+
+<div class="container-updateItem">
+	<h3>Update your inventory:</h3>
+	<label for="updateItemId" style="font-family: Comic Sans MS,Times new roman;">Product ID:</label><br><input type="text" id="updateItemId" style="width: 80%;"><br>
+    <label for="newPrice" style="font-family: Comic Sans MS,Times new roman;">New price(if any):</label><br><input type="text" id="newPrice" style="width: 80%;"><br>
+	<label for="newInventory" style="font-family: Comic Sans MS,Times new roman;">No. of pieces to be added:</label><br><input type="text" id="newInventory" style="width: 80%;"><br>
+	<button class="button-updateItem">Update product</button><br><br><br>
+
+    </div></div>
+
+<div class="container-viewOrders">
+<h3 style='color:black;'>Your received orders:</h3>
+    <div id="container-orderTable"></div>
+</div>
+    </div>
+</body>
+</html>

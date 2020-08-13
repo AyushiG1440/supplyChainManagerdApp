@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>supplyChain dApp</title>
+	<link rel="stylesheet" href="css/style1.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/web3.min.js"></script>
+    	<script src="js/truffle-contract.js"></script>
+    	<script src="js/history.js"></script>
+</head>
+<body style="font-family:sans-serif;">
+    <div class="container">
+<div class="container-top">
+<header><h1><u>Shopping history</u></h1></header>
+    <div class="select-address">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Search for product.." title="Type in a name"> 
+        <div class="dropdown" style='display: inline-block;float: right;'>
+    <button class="dropbtn">Dropdown  >></button>
+    <div class="dropdown-content">
+        <a href="seller.html">Seller profile</a>
+        <a href="customer.html">Shop now!</a>
+        <a href="index.html">Logout</a>
+    </div>
+</div>
+    </div></div>
+    <div class="container-side">
+     <div class="container-confirmReceive">
+	<h3>Confirm ordered received to get refund of 0.5 ether deposit-</h3>
+	<label for="confirmItemId" style="font-family: Comic Sans MS,Times new roman;">Item ID of product received:</label><br><input type="text" id="confirmItemId" style="width: 80%;"><br>
+	<label for="confirmOrderId" style="font-family: Comic Sans MS,Times new roman;">Order ID:</label><br><input type="text" id="confirmOrderId" style="width: 80%;"><br><br>
+	<button class="button-confirmReceive">Confirm received order</button>
+        </div></div>
+	<h3 style='color:black;'>Your shopping history:</h3>
+    <div class="container-historyTable"></div><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+body{
+background-color : white;
+padding:0px;
+margin: 0px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0px;
+    width:100%;
+    height: 100%;
+}
+
+div{
+margin :0.5%;
+}
+
+button{
+background-color: #4CAF50;
+border-width : 2px;
+margin:5px;
+border-radius: 10px;
+font-size:100%;
+width:30%;
+height:25%;
+}
+
+.typewriter{
+margin: 6% 5% 0% 5%;
+color:darkblue;
+font-size: 240%;
+z-index: 2;
+position: relative;
+}
+
+.typewriter h2 {
+        font-family: monospace;/* Web-safe typewriter-like font */
+        overflow: hidden;/* Ensures the content is not revealed until the animation */
+        border-right: 2px solid white;/* The typewriter cursor */
+        white-space: nowrap;/* Keeps the content on a single line */
+        margin: 0 auto;/* Gives that scrolling effect as the typing happens */
+        letter-spacing: .17em;/* Adjust as needed */
+        animation: typing 8s steps(30, end) alternate infinite, blinking-cursor .5s step-end infinite;
+      }
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0
+        }
+          75%{
+              width:100%;
+          }
+        to {
+          width: 100%
+        }
+      }
+      /* The typewriter cursor effect */
+      @keyframes blinking-cursor {
+        from,
+        to {
+          border-color: transparent
+        }
+        50% {
+          border-color: white;
+        }
+      }
+
+button:hover{
+background : rgba(102, 255, 51, 0.5);
+}
+
+.container-main{
+    position: relative;
+    overflow: hidden;
+    border: 0px;
+    margin: 0px;
+    border-radius: 0% 0% 5% 5%;
+}
+
+.container-main img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    opacity: 0.8;
+}
+
+.container-start{
+padding: 8% 1% 8% 4%;
+width:35%;
+height:70%;
+border :3px ridge white;
+border-radius: 2%;
+margin:10% 30%;
+z-index: 2;
+position: relative;
+}
+
+
+.container-header{
+padding : 2%;
+z-index: 2;
+position:relative;
+}
+
+h1{
+word-spacing: 7px;
+width: 30%;
+display: inline-block;
+float: left;
+text-align : center;
+color:darkblue;
+z-index: 2;
+position: relative;
+font: 160% Arial, Times new roman;
+font-weight:bold; 
+}
+
+nav{
+margin-left: 30%;
+display: inline;
+float: right;
+z-index: 2;
+width: 40%;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+    display: inline;
+    float: right;
+    margin:0px 10px;
+}
+
+nav li a {
+display: inline-block;
+color: white;
+text-align: center;
+text-decoration: none;
+border: 2px solid white;
+border-radius: 15px;
+width:140px;
+padding: 5px;
+z-index: 2;
+position: relative;
+}
+
+nav li a:hover{
+display: inline-block;
+color:darkblue;
+text-align: center;
+text-decoration: none;
+border: 2px solid darkblue;
+border-radius: 15px;
+background-color:white;
+width:140px;
+padding: 5px;
+z-index: 2;
+position: relative;
+}
+
+input{
+width:60%;
+border: none;
+border-bottom: 1px solid rgb(0, 0, 77);
+background: rgb(179, 230, 255);
+padding : 5px;
+margin:5px;
+overflow : auto;
+}
+
+#container-about{
+    margin:2%;
+    padding:2%;
+    width: 93%;
+}
+
+#container-about h2{
+font-style: italic;
+margin: 10% 3%;
+font-size: 300%;  
+text-align: center;
+color: darkblue;
+}
+
+.container-points{
+margin: 0.5%;
+padding: 0.5%;
+border: 3px ridge darkblue;
+border-radius: 10px;
+display: inline-block;
+width: 30%;
+height: 30%;
+text-align: center;
+margin-bottom: 10%;
+font-style: oblique;
+}
+
+.container-points h4{
+    color:#808080;
+    font-size: 120%;
+    margin:0px;
+    margin-bottom: 1%;
+}
+
+.container-points img{
+    width: 13%;
+    height:13%;
+}
+
+.container-points p{
+    font-family:sans-serif;
+    font-size: 130%;
+}
+
+#container-footer{
+    margin: 0px;
+    padding: 0px;
+    border:0px;
+}
+
+#container-footer img{
+    position: absolute;
+    border-radius: 15% 15% 0% 0%;
+    width: 100%;
+    height:60%;
+    opacity: 0.7;
+}
+
+.container-contact-details{
+padding : 20px;
+z-index: 2;
+position:relative;
+color: darkblue;
+}
+
+label{
+margin : 1px;
+}
+
+.container-top{
+    background-color:cornflowerblue;
+    padding:1% 1%;
+    margin: 0px;
+    height: 10%;
+}
+
+.container-top h1{
+color: white;
+word-spacing: 7px;
+width:100%;
+display:block;
+float:none;
+text-align : center;
+font: 160% Arial, Times new roman;
+font-weight:bold;
+margin: 0px;
+padding: 0px;
+}
+
+.container-bottom{
+    background-color:cornflowerblue;
+    padding:1% 1%;
+    margin: 0px;
+    height: 10%;
+}
+
+table{
+border-collapse : collapse;
+width : 100%;
+background-color : #ffffff;
+border: 2px solid grey;
+}
+
+th, td {
+padding : 15px;
+text-align : center;
+border: 1px solid grey;
+
+}
+
+th{
+border-bottom:3px solid grey;
+background-color :limegreen;
+font-size:20px;
+color: white;
+}
+
+tr:hover {
+background-color : rgb(204, 204, 204);
+}
+
+.button-start{
+margin-left:2%;
+margin-top:5%;
+margin-bottom:5%;
+background: rgb(77, 148, 255);
+width: 50%;
+}
+
+.button-login{
+background: rgb(77, 148, 255);
+width: 30%;
+}
+
+.container-side{
+    display: inline-block;
+    width:23%;
+    padding:3% 1%;
+    float: left;
+    background-color: cornflowerblue;
+}
+
+.container-viewOrders{
+    display: inline-block;
+    width: 71%;
+    float: right;
+}
+
+.container-historyTable{
+    display: inline-block;
+    width: 71%;
+    float: right;
+}
+
+.container-side button{
+    width:50%;
+    margin-left: 20%;
+    background-color: darkblue;
+    border: 1px solid white;
+    color: white;
+}
+
+.container-side button:hover{
+    width:50%;
+    margin-left: 20%;
+    background-color: white;
+    border: 1px solid darkblue;
+    color: darkblue;
+}
+
+.container-addItem,.container-updateItem,.container-viewOrders,.container-viewItems,.container-placeOrder,.container-confirmReceive,.container-history,.product-placeOrder,.container-historyTable{
+background : rgb(179, 230, 255);
+padding : 0.5%;
+margin : 0.5%;
+border :1px inset black;
+border-radius: 10px;
+}
+
+.product-placeOrder{
+width:85%;
+height:70%;
+margin:5%;
+font-size:130%;
+}
+
+.container-addItem,.container-updateItem,{
+width:90%;
+height:30%;
+margin-left: 2%;
+border :1px ridge darkblue;
+border-radius: 10px;
+}
+
+.container-confirmReceive{
+width:90%;
+height:100%;
+margin:0px;
+margin-left: 2%;
+border :1px ridge darkblue;
+border-radius: 10px;
+}
+
+.dropbtn {
+  background-color: royalblue;
+  color:white;
+  padding: 2%;
+  font-size: 100%;
+  border: 2px solid white;
+  cursor: pointer;
+  margin-right:10px;
+  height:40px;
+  width: 250px;
+}
+
+.dropbtn:hover{
+    background-color: white;
+    color: royalblue;
+    border: 2px solid royalblue;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 250px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #a6a6a6}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#myInput {
+margin-top: 10px;
+  background: rgb(255, 255, 255);
+  background-image: url('searchicon.png');
+  background-position: 5px 9px;
+  background-repeat: no-repeat;
+  width: 65%;
+  font-size: 13px;
+  padding: 5px 10px 5px 30px;
+}
