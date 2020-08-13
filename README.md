@@ -8,6 +8,7 @@ Software requirements:
 3) Node.js v9.4.0
 4) Metamask chrome plugin
 
+(PS-change name src v0.3 to src)
   To test the application on local blockchain developed using truffle, first clone this repository.
   Then in terminal(1), find path to the root file of this repository (i.e supplyChain folder).
   Run the command "Truffle compile". 
